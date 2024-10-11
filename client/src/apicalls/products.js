@@ -1,13 +1,12 @@
 import { message } from "antd";
 import { axiosInstance } from "./axiosInstance";
-import { baseURL } from "./axiosInstance";
 
 
 
 export const addProduct = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      `${baseURL}/api/products/addProduct`,
+      `/api/products/addProduct`,
       payload
     );
     return response.data;
@@ -19,7 +18,7 @@ export const addProduct = async (payload) => {
 export const getProducts = async (filters) => {
   try {
     const response = await axiosInstance.post(
-      `${baseURL}/api/products/getProducts`,
+      `/api/products/getProducts`,
       filters
     );
     return response.data;
@@ -31,7 +30,7 @@ export const getProducts = async (filters) => {
 export const updateProduct = async (id, payload) => {
   try {
     const response = await axiosInstance.put(
-      `${baseURL}/api/products/editProduct/${id}`,
+      `/api/products/editProduct/${id}`,
       payload
     );
     return response.data;
@@ -43,7 +42,7 @@ export const updateProduct = async (id, payload) => {
 export const deleteProduct = async (id) => {
   try {
     const response = await axiosInstance.delete(
-      `${baseURL}/api/products/deleteProduct/${id}`
+      `/api/products/deleteProduct/${id}`
     );
     return response.data;
   } catch (error) {
@@ -54,7 +53,7 @@ export const deleteProduct = async (id) => {
 export const GetProductById = async (id) => {
   try {
     const response = await axiosInstance.get(
-      `${baseURL}/api/products/getProduct/${id}`
+      `/api/products/getProduct/${id}`
     );
     return response.data;
   } catch (error) {
@@ -65,7 +64,7 @@ export const GetProductById = async (id) => {
 export const uploadImage = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      `${baseURL}/api/products/uploadImage`,
+      `/api/products/uploadImage`,
       payload
     );
     return response.data;
@@ -77,7 +76,7 @@ export const uploadImage = async (payload) => {
 export const updateStatus = async (id, status) => {
   try {
     const response = await axiosInstance.put(
-      `${baseURL}/api/products//updateStatus/${id}`,
+      `/api/products//updateStatus/${id}`,
       { status }
     );
     return response.data;
@@ -89,7 +88,7 @@ export const updateStatus = async (id, status) => {
 export const PlaceNewBid = async (payload) => {
   try {
     const response = await axiosInstance.post(
-      `${baseURL}/api/bids/placeNewBid`,
+      `/api/bids/placeNewBid`,
       payload
     );
     return response.data;
@@ -101,7 +100,7 @@ export const PlaceNewBid = async (payload) => {
 export const GetAllBids = async(filter)=>{
   try{
     const response = await axiosInstance.post(
-      `${baseURL}/api/bids/getAllBids`,
+      `/api/bids/getAllBids`,
       filter
     );
     return response.data;
