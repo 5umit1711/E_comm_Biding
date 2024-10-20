@@ -40,6 +40,7 @@ const Products = () => {
       dispatch(setLoader(false));
       if (response.success) {
         message.success(response.message);
+        getdata();
       } else {
         message.error(response.message);
       }

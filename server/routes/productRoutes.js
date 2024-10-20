@@ -3,6 +3,7 @@ import Product from "../models/productModel.js";
 import authorization from "../middleware/authMiddleware.js";
 import cloudinary from "../config/cloudinary.js";
 import multer from "multer";
+import Bids from "../models/bidModel.js";
 
 const router = express.Router();
 
@@ -90,6 +91,7 @@ router.put("/editProduct/:id", authorization, async (req, res) => {
 router.delete("/deleteProduct/:id", authorization, async (req, res) => {
   try {
     await Product.findByIdAndDelete(req.params.id);
+    await Bids.deleteMany({product: req.params.id});
     res.send({
       success: true,
       message: "Product deleted successfully",

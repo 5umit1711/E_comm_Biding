@@ -5,9 +5,9 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "build" : "cd server && npm install && cd ../client && npm install && npm run build",
-    "start" : "node server/server.js",
-    "test" : "echo \"Error: no text specified\" && exit 1"
+    "dev" : "nodemon server/server.js",
+    "build" : "npm install && npm install --prefix client && npm run build --prefix client",
+    "start" : "node server/server.js"
   },
   "keywords": [],
   "author": "",

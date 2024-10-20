@@ -1,7 +1,4 @@
-import { message } from "antd";
 import { axiosInstance } from "./axiosInstance";
-
-
 
 export const addProduct = async (payload) => {
   try {

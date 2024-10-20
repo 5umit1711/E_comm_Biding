@@ -35,7 +35,7 @@ const UserBids = () => {
       title: "Product",
       dataIndex: "product",
       render: (text, record) => {
-        return record.product.name;
+        return record.product?.name;
       },
     },
     {
