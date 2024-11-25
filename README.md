@@ -1,6 +1,6 @@
 # E-commerce Bidding App
 
-The E-commerce Bidding App is a platform where users can post their products for auction, and other users can place bids on them. It features a Role-Based Access Control (RBAC) system where admins have additional privileges such as approving or rejecting products and blocking users.
+The E-commerce Bidding App is a platform where users can post their products for auction, and other users can place bids on them. It features a Role-Based Access Control (RBAC) system where admins have additional privileges such as approving or rejecting products and blocking users. It also uses a lot of UI libraries for better user experience. It also uses redux toolkit for state management.
 
 ---
 
