@@ -46,3 +46,8 @@ The E-commerce Bidding App is a platform where users can post their products for
    cd ecommerce-bidding-app
    npm run build
    npm run dev
+
+3. **Admin Credentials**
+   ```bash
+   email: 22350@iiitu.ac.in
+   password: sumit1711
