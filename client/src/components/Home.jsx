@@ -17,6 +17,8 @@ const Home = () => {
   const user = useSelector((state) => state.user.user);
   const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState({
+    seller: user._id,
+    excludeSeller: true,
     status: "approved",
     category: '',
     age: '',
@@ -28,6 +30,7 @@ const Home = () => {
     getData();
   }
 
+  
   const getData = async () => {
     try {
       dispatch(setLoader(true));
@@ -44,7 +47,7 @@ const Home = () => {
 
   useEffect(() => {
     getData();
-  }, [filters]);
+  }, [filters, dispatch]);
 
   return (
     <div className="flex gap-2">

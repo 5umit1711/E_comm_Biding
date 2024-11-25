@@ -86,7 +86,7 @@ router.get("/getCurrentUser", authorization, async(req, res)=>{
 
 router.get("/getUsers", authorization, async(req, res)=>{
     try{
-        const users = await User.find();
+        const users = await User.find({role: {$ne: "admin"}});
         res.send({
             success: true,
             message: "User fetched successfully",

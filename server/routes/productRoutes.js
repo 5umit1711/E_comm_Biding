@@ -25,13 +25,13 @@ router.post("/addProduct", authorization, async (req, res) => {
 
 router.post("/getProducts", async (req, res) => {
   try {
-    const {seller, category, age, status, search} = req.body;
+    const {seller, category, age, status, search, excludeSeller} = req.body;
     let filters = {};
     if(search){
       filters.name = {$regex: search};
     }
     if(seller){
-        filters.seller = seller;
+        filters.seller = excludeSeller ? { $ne: seller } : seller;
     }
     if(status){
       filters.status = status;
