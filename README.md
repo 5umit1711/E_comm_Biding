@@ -43,7 +43,7 @@ The E-commerce Bidding App is a platform where users can post their products for
    
 2. **Use the following command**
    ```bash
-   cd ecommerce-bidding-app
+   cd E_comm_Biding
    npm run build
    npm run dev
 
