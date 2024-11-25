@@ -15,7 +15,7 @@ The E-commerce Bidding App is a platform where users can post their products for
 
 ### Role-Based Access Control (RBAC)
 #### Admin Privileges
-- Approve or reject posted products.
+- Approve or reject or block the posted products.
 - Block or unblock users.
 - Manage the entire bidding process and product visibility.
 
